@@ -6,16 +6,7 @@ import (
 	"log"
 
 	"github.com/segmentio/kafka-go"
-	_ "github.com/segmentio/kafka-go/gzip"
-	_ "github.com/segmentio/kafka-go/lz4"
-	_ "github.com/segmentio/kafka-go/snappy"
 )
-
-type UserInfo struct {
-	Id   int
-	Name string
-	Age  int
-}
 
 func main() {
 	// 此处须导入编码（gzip或lz4或snappy）否则报：the compression code is invalid or its codec has not been imported
